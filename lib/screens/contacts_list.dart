@@ -5,12 +5,7 @@ import 'package:bytebank/screens/contact_form.dart';
 import 'package:bytebank/screens/transaction_form.dart';
 import 'package:flutter/material.dart';
 
-class ContactsList extends StatefulWidget {
-  @override
-  _ContactsListState createState() => _ContactsListState();
-}
-
-class _ContactsListState extends State<ContactsList> {
+class ContactsList extends StatelessWidget {
   final ContactDao _dao = ContactDao();
 
   @override
@@ -60,7 +55,7 @@ class _ContactsListState extends State<ContactsList> {
             MaterialPageRoute(
               builder: (context) => ContactForm(),
             ),
-          ).then((value) => setState(() {}));
+          );
         },
         child: Icon(
           Icons.add,
